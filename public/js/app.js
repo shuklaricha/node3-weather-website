@@ -1,4 +1,3 @@
-console.log("client side js file loaded!!");
 
 // fetch("http://puzzle.mead.io/puzzle").then((response) => {
 //   console.log(response);
@@ -15,6 +14,7 @@ console.log("client side js file loaded!!");
 //       console.log(data.forecast);
 //     });
 //   })
+
 //   .catch((error) => {
 //     console.log(error);
 //   });
