@@ -23,6 +23,7 @@ const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const messageOne = document.querySelector("#message1");
 const messageTwo = document.querySelector("#message2");
+const messageThree = document.querySelector("#message3");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -30,6 +31,7 @@ weatherForm.addEventListener("submit", (e) => {
   console.log(location);
   messageOne.textContent = "Loading...";
   messageTwo.textContent = "";
+  messageThree.textContent = "";
   fetch("/weather?address=" + location)
     .then((response) => {
       response.json().then((data) => {
@@ -41,6 +43,7 @@ weatherForm.addEventListener("submit", (e) => {
           console.log(data.forecast);
           messageOne.textContent = data.address;
           messageTwo.textContent = data.forecast.weatherDesription;
+          messageThree.textContent = data.forecast.observationTime;
         }
       });
     })

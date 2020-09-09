@@ -18,6 +18,7 @@ const forecast = (longitude, latitude, callback) => {
         weatherDesription: data.weather_descriptions[0],
         temperature: data.temperature,
         feelsLike: data.feelslike,
+        observationTime: data.observation_time,
       });
       //   console.log(data.weather_descriptions[0] + ` It is Currently `+ data.temperature +' out. It feels like '+ data.feelslike + ' out.');
     }
